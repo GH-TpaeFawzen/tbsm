@@ -773,7 +773,7 @@ parmOfOption() {
   fi
 }
 
-noMoreCommand() { return $((!!"${#cmdStack[@]}")); }
+noMoreCommand() { return $((! ! "${#cmdStack[@]}")); }
 clearCommands() { cmdStack=(); }
 
 prompt() {
